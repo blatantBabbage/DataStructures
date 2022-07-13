@@ -13,7 +13,7 @@ public class CreatingArray {
         int[] intNumbers;
 
         /* step 2: instantiating array of size 3, this will allocate 3 contagious blocks of memory, with 0 as the default value
-        of each block
+        of each block. This will also map the physical address of the 1st block of array to the array reference
          */
         intNumbers = new int[3];
 
@@ -26,7 +26,7 @@ public class CreatingArray {
         System.out.println(Arrays.toString(intNumbers));
 
         /* Alternatively all above step could be combined into 1 step of, O(1) time complexity */
-        int simpleIntNumber[] = {1, 2, 3};
+        int[] simpleIntNumber = {1, 2, 3};
 
         // printing simpleIntNumber the array
         System.out.println(Arrays.toString(simpleIntNumber));
