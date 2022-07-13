@@ -32,6 +32,22 @@ public class Simple1DArray {
         }
     }
 
+    // Search an element in Array, with O(n) time complexity
+    public void searchArrayElement(int valueToBeSearched) {
+        try {
+            System.out.println("Searching for array element .../...");
+            for(int i=0; i<intNumber.length; i++) {
+                if(intNumber[i] == valueToBeSearched) {
+                    System.out.println("Array element is found at : " + i);
+                    return;
+                }
+            }
+            System.out.println("Array element not");
+        } catch (Exception e) {
+            System.out.println("Array is not instantiated : " + e);
+        }
+    }
+
     public static void main(String[] args) {
         Simple1DArray simple1DArray = new Simple1DArray(10);
 
@@ -43,5 +59,8 @@ public class Simple1DArray {
 
         // log array. P.S. we had to access intNumber with class object(instance) simple1DArray, as intNumber field is non-static
         System.out.println(Arrays.toString(simple1DArray.intNumber));
+
+        // Array search
+        simple1DArray.searchArrayElement(10);
     }
 }
