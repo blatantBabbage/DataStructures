@@ -12,6 +12,7 @@ public class Simple2DArray {
         intNumbers = new int[rows][columns];
 
         // set default array value to min Integers instead of 0, as set by compiler for int Arrays
+        // Note: Incase of 2D arrays,array.length() method returns number of rows
         for(int i=0; i<intNumbers.length; i++) {
             for (int j=0; j<intNumbers[0].length; j++) {
                 intNumbers[i][j] = Integer.MIN_VALUE;
@@ -33,6 +34,24 @@ public class Simple2DArray {
         }
     }
 
+    // Search an element in Array by Array traversal, with O(mn) time complexity
+    public void searchArrayElement(int valueToBeSearched) {
+        try {
+            System.out.println("Searching for array element .../...");
+            for(int i=0; i<intNumbers.length; i++) {
+                for(int j=0; j<intNumbers[0].length; j++) {
+                    if(intNumbers[i][j] == valueToBeSearched) {
+                        System.out.println("Array element is found at row : " + i + " column : " + j);
+                        return;
+                    }
+                }
+            }
+            System.out.println("Array element not found");
+        } catch (Exception e) {
+            System.out.println("Array is not instantiated : " + e);
+        }
+    }
+
     public static void main(String[] args) {
         Simple2DArray simple2DArray = new Simple2DArray(3,3);
         simple2DArray.insert(0,0, 20);
@@ -41,6 +60,10 @@ public class Simple2DArray {
         simple2DArray.insert(1,2, 9);
         simple2DArray.insert(3,10, 1000);
 
+        // log array. P.S. we had to access intNumber with class object(instance) simple1DArray, as intNumber field is non-static
         System.out.println(Arrays.deepToString(simple2DArray.intNumbers));
+
+        // Array search
+        simple2DArray.searchArrayElement(32);
     }
 }

@@ -42,7 +42,7 @@ public class Simple1DArray {
                     return;
                 }
             }
-            System.out.println("Array element not");
+            System.out.println("Array element not found");
         } catch (Exception e) {
             System.out.println("Array is not instantiated : " + e);
         }
