@@ -10,8 +10,8 @@ public class MaxProductOfTwoInt {
             for(int j = i+1; j<intArray.length; j++) {
                 if(intArray[i]*intArray[j] > product) {
                     product = intArray[i]*intArray[j];
-                    maxProductIndex[0] = i;
-                    maxProductIndex[1] = j;
+                    maxProductIndex[0] = intArray[i];
+                    maxProductIndex[1] = intArray[j];
                 }
                 continue;
             }
