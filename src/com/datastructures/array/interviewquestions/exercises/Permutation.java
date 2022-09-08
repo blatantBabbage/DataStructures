@@ -47,8 +47,8 @@ public class Permutation {
         for (int i=0; i< array1.length; i++) {
             sum1 += array1[i];
             sum2 += array2[i];
-            mul1 += array1[i];
-            mul2 += array2[i];
+            mul1 *= array1[i];
+            mul2 *= array2[i];
         }
 
         if(sum1 == sum2 && mul1 == mul2) {
@@ -73,6 +73,6 @@ public class Permutation {
         // pair 4; unique array with all values matching
         int[] intArray7 = {1, 2, 3, 4};
         int[] intArray8 = {3, 1, 4, 2};
-        isPermutation(intArray3, intArray4);
+        isPermutation(intArray1, intArray2);
     }
 }
