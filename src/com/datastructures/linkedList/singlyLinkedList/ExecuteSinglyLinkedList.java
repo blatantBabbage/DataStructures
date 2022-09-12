@@ -6,5 +6,9 @@ public class ExecuteSinglyLinkedList {
         CreateSinglyLinkedList createSinglyLinkedList = new CreateSinglyLinkedList();
         createSinglyLinkedList.generateNode(5);
         System.out.println(createSinglyLinkedList.head.nodeValue);
+        createSinglyLinkedList.insertNode(6,1);
+        System.out.println(createSinglyLinkedList.head.nextReference.nodeValue);
+        createSinglyLinkedList.insertNode(7,2);
+        System.out.println(createSinglyLinkedList.head.nextReference.nextReference.nodeValue);
     }
 }
