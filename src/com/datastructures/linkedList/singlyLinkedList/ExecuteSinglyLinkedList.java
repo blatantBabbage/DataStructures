@@ -10,5 +10,8 @@ public class ExecuteSinglyLinkedList {
         System.out.println(createSinglyLinkedList.head.nextReference.nodeValue);
         createSinglyLinkedList.insertNode(7,2);
         System.out.println(createSinglyLinkedList.head.nextReference.nextReference.nodeValue);
+        createSinglyLinkedList.insertNode(8,3);
+        createSinglyLinkedList.insertNode(9,4);
+        createSinglyLinkedList.traverseSinglyLinkedList();
     }
 }
