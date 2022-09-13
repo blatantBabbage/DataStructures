@@ -13,5 +13,6 @@ public class ExecuteSinglyLinkedList {
         createSinglyLinkedList.insertNode(8,3);
         createSinglyLinkedList.insertNode(9,4);
         createSinglyLinkedList.traverseSinglyLinkedList();
+        createSinglyLinkedList.searchNode(9);
     }
 }

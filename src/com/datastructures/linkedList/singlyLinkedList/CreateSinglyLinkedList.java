@@ -77,6 +77,23 @@ public class CreateSinglyLinkedList {
                 }
                 tempNode = tempNode.nextReference;
             }
+            System.out.println("");
         }
+    }
+
+    // search for a node
+    boolean searchNode(int valueOfNode) {
+        if(head != null) {
+            Node tempNode = head;
+            for(int i=0; i<size; i++) {
+                if(tempNode.nodeValue == valueOfNode) {
+                    System.out.println("Node found at index: " + i);
+                    return true;
+                }
+                tempNode = tempNode.nextReference;
+            }
+        }
+        System.out.println("Node not found");
+        return false;
     }
 }
