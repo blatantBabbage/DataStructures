@@ -12,7 +12,9 @@ public class ExecuteSinglyLinkedList {
         System.out.println(createSinglyLinkedList.head.nextReference.nextReference.nodeValue);
         createSinglyLinkedList.insertNode(8,3);
         createSinglyLinkedList.insertNode(9,4);
-        createSinglyLinkedList.traverseSinglyLinkedList();
         createSinglyLinkedList.searchNode(9);
+        createSinglyLinkedList.traverseSinglyLinkedList();
+        createSinglyLinkedList.deleteNode(3);
+        createSinglyLinkedList.traverseSinglyLinkedList();
     }
 }

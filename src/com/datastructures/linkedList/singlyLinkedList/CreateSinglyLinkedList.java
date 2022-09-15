@@ -96,4 +96,37 @@ public class CreateSinglyLinkedList {
         System.out.println("Node not found");
         return false;
     }
+
+    // Delete a node from singly linked list
+    public void deleteNode(int location) {
+        if(head == null) {
+            System.out.println("Linked list is not initialized");
+            return;
+        } else if(location == 0) {
+            head = head.nextReference;
+            size--;
+            if(location == size-1) {
+                tail = null;
+            }
+        } else if (location >= size) {
+            Node tempNode = head;
+            for (int i=0; i<size-1; i++) {
+                tempNode = tempNode.nextReference;
+            }
+            if (tempNode == head) {
+                head = tail = null;
+                size--;
+            }
+            tempNode.nextReference = null;
+            tail = tempNode;
+            size--;
+        } else {
+            Node tempNode = head;
+            for (int i=0; i<location-1; i++) {
+                tempNode = tempNode.nextReference;
+            }
+            tempNode.nextReference = tempNode.nextReference.nextReference;
+            size--;
+        }
+    }
 }
