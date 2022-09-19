@@ -16,5 +16,7 @@ public class ExecuteSinglyLinkedList {
         createSinglyLinkedList.traverseSinglyLinkedList();
         createSinglyLinkedList.deleteNode(3);
         createSinglyLinkedList.traverseSinglyLinkedList();
+        createSinglyLinkedList.deleteSinglyLinkedList();
+        createSinglyLinkedList.traverseSinglyLinkedList();
     }
 }
