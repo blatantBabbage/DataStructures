@@ -20,5 +20,6 @@ public class ExecuteCircularSinglyLinkedList {
         circularSinglyLinkedListFactory.traverseCircularSinglyLinkedList();
         circularSinglyLinkedListFactory.deleteNode(4);
         circularSinglyLinkedListFactory.traverseCircularSinglyLinkedList();
+        circularSinglyLinkedListFactory.deleteCircularSinglyLinkedList();
     }
 }

@@ -142,4 +142,16 @@ public class CircularSinglyLinkedListFactory {
             size--;
         }
     }
+
+    /* Delete complete circular singly linked list */
+    public void deleteCircularSinglyLinkedList() {
+        if(head == null) {
+            System.out.println("circular singly linked list doesn't exist !!");
+            return;
+        }
+        head = null;
+        tail.nodeReference = null;
+        tail = null;
+        System.out.println("circular singly linked list deleted completely !!");
+    }
 }
