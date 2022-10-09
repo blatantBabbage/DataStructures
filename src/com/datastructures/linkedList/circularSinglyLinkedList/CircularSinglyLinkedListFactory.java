@@ -96,6 +96,8 @@ public class CircularSinglyLinkedListFactory {
             System.out.println("Circular singly linked list doesn't exist !!");
             return;
         } else if (index == 0) {
+            /* to delete node from the beginning */
+            // to check if list only has one node
             if(size == 1) {
                 head = null;
                 tail = null;
@@ -106,24 +108,36 @@ public class CircularSinglyLinkedListFactory {
             tail.nodeReference = head;
             size--;
         } else if (index >= size-1) {
-            if(size == 1) {
+            /* to delete node from the end of the list */
+
+            // tempNode is assigned with head to loop from beginning
+            Node tempNode = head;
+            // we're only running till 'size-2' as we want to stop at the second last node and then update its reference
+            for(int i=0; i<size-2; i++) {
+                tempNode = tempNode.nodeReference;
+            }
+            /* this will be true when the list has only one node, also its implies that the above loop wouldn't execute
+            and tempNode will remain assigned with head value */
+            if(tempNode == head) {
                 head = null;
                 tail = null;
                 head.nodeReference = null;
                 size--;
             }
-            Node tempNode = head;
-            for(int i=0; i<size-2; i++) {
-                tempNode = tempNode.nodeReference;
-            }
+            // pointing the 2nd last node to head
             tempNode.nodeReference = head;
+            // pointing tail to the 2nd-last node
             tail = tempNode;
             size--;
         } else {
             Node tempNode = head;
+            /* looping till 'index-1' as we want to stop at a node before the node we want to delete; where tempNode has
+            reference to the node we want to delete */
             for(int i=0; i<index-1; i++) {
                 tempNode = tempNode.nodeReference;
             }
+            /* assigning node reference of node before the node we want to delete as the reference of node after the
+            node we want to delete */
             tempNode.nodeReference = tempNode.nodeReference.nodeReference;
             size--;
         }
