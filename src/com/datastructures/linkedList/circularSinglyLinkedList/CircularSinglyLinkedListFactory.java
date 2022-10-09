@@ -113,15 +113,15 @@ public class CircularSinglyLinkedListFactory {
             // tempNode is assigned with head to loop from beginning
             Node tempNode = head;
             // we're only running till 'size-2' as we want to stop at the second last node and then update its reference
-            for(int i=0; i<size-2; i++) {
+            for(int i=0; i<size-1; i++) {
                 tempNode = tempNode.nodeReference;
             }
             /* this will be true when the list has only one node, also its implies that the above loop wouldn't execute
             and tempNode will remain assigned with head value */
             if(tempNode == head) {
+                head.nodeReference = null;
                 head = null;
                 tail = null;
-                head.nodeReference = null;
                 size--;
             }
             // pointing the 2nd last node to head
