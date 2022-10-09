@@ -11,14 +11,20 @@ public class ExecuteCircularSinglyLinkedList {
         System.out.println("tail is " + circularSinglyLinkedListFactory.tail.nodeValue);
         circularSinglyLinkedListFactory.insertNode(6,1);
         System.out.println("head is " + circularSinglyLinkedListFactory.head.nodeValue);
-        System.out.println("\n\n******Testing*******");
-        System.out.println("<0> " + circularSinglyLinkedListFactory.head.nodeValue);
-        System.out.println("<1> " + circularSinglyLinkedListFactory.head.nodeReference.nodeValue);
-        System.out.println("<2> " + circularSinglyLinkedListFactory.head.nodeReference.nodeReference.nodeValue);
-        System.out.println("<3> " + circularSinglyLinkedListFactory.head.nodeReference.nodeReference.nodeReference.nodeValue);
-        System.out.println("******Testing*******");
+//        System.out.println("\n\n******Testing*******");
+//        System.out.println("<0> " + circularSinglyLinkedListFactory.head.nodeValue);
+//        System.out.println("<1> " + circularSinglyLinkedListFactory.head.nodeReference.nodeValue);
+//        System.out.println("<2> " + circularSinglyLinkedListFactory.head.nodeReference.nodeReference.nodeValue);
+//        System.out.println("<3> " + circularSinglyLinkedListFactory.head.nodeReference.nodeReference.nodeReference.nodeValue);
+//        System.out.println("******Testing*******");
         System.out.println("\n\nTraversing circular singly linked list --/--");
         circularSinglyLinkedListFactory.traverseCircularSinglyLinkedList();
         circularSinglyLinkedListFactory.searchNode(6);
+        circularSinglyLinkedListFactory.deleteNode(0);
+        circularSinglyLinkedListFactory.traverseCircularSinglyLinkedList();
+        circularSinglyLinkedListFactory.deleteNode(1);
+        circularSinglyLinkedListFactory.traverseCircularSinglyLinkedList();
+        circularSinglyLinkedListFactory.deleteNode(2);
+        circularSinglyLinkedListFactory.traverseCircularSinglyLinkedList();
     }
 }

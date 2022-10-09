@@ -66,6 +66,7 @@ public class CircularSinglyLinkedListFactory {
                 }
                 tempNode = tempNode.nodeReference;
             }
+            System.out.println("");
         } else {
             System.out.println("\n Circular singly linked list does not exist!");
         }
@@ -77,7 +78,8 @@ public class CircularSinglyLinkedListFactory {
             Node tempNode = head;
             for(int i=0; i<size; i++) {
                 if(tempNode.nodeValue == valueOfNode) {
-                    // we're mentioning location instead of mentioning index, coz we're looping on size and as size basically starts with 1, we can also call it as location
+                    /* we're mentioning location instead of mentioning index, coz we're looping on size and as size
+                    basically starts with 1, we can also call it as location */
                     System.out.println("\nNode is found at location : " + i);
                     return true;
                 }
@@ -86,5 +88,44 @@ public class CircularSinglyLinkedListFactory {
         }
         System.out.println("\nNode not found");
         return false;
+    }
+
+    /* Delete a node in circular singly linked list */
+    public void deleteNode(int index) {
+        if(head == null) {
+            System.out.println("Circular singly linked list doesn't exist !!");
+            return;
+        } else if (index == 0) {
+            if(size == 1) {
+                head = null;
+                tail = null;
+                head.nodeReference = null;
+                size--;
+            }
+            head = head.nodeReference;
+            tail.nodeReference = head;
+            size--;
+        } else if (index >= size-1) {
+            if(size == 1) {
+                head = null;
+                tail = null;
+                head.nodeReference = null;
+                size--;
+            }
+            Node tempNode = head;
+            for(int i=0; i<size-2; i++) {
+                tempNode = tempNode.nodeReference;
+            }
+            tempNode.nodeReference = head;
+            tail = tempNode;
+            size--;
+        } else {
+            Node tempNode = head;
+            for(int i=0; i<index-1; i++) {
+                tempNode = tempNode.nodeReference;
+            }
+            tempNode.nodeReference = tempNode.nodeReference.nodeReference;
+            size--;
+        }
     }
 }
