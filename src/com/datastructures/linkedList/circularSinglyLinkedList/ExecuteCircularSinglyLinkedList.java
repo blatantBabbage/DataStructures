@@ -19,5 +19,6 @@ public class ExecuteCircularSinglyLinkedList {
         System.out.println("******Testing*******");
         System.out.println("\n\nTraversing circular singly linked list --/--");
         circularSinglyLinkedListFactory.traverseCircularSinglyLinkedList();
+        circularSinglyLinkedListFactory.searchNode(6);
     }
 }
