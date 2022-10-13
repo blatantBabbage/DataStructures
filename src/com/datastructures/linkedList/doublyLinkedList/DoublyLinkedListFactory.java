@@ -84,4 +84,22 @@ public class DoublyLinkedListFactory {
             System.out.println("Doubly linked list does not exist !!");
         }
     }
+
+    /* Searching doubly linked list */
+    public boolean searchNode(int valueOfNode) {
+        DoublyNode tempNode = head;
+        if(head != null) {
+            for(int i=0; i<size; i++) {
+                if(tempNode.nodeValue == valueOfNode) {
+                    System.out.println("Node found at location/index : " + i);
+                    return true;
+                }
+                tempNode = tempNode.nextNode;
+            }
+            System.out.println("Node not found !!");
+            return false;
+        }
+        System.out.println("Doubly linked list does not exist !!");
+        return false;
+    }
 }

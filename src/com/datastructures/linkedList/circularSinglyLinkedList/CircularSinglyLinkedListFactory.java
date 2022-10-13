@@ -78,8 +78,6 @@ public class CircularSinglyLinkedListFactory {
             Node tempNode = head;
             for(int i=0; i<size; i++) {
                 if(tempNode.nodeValue == valueOfNode) {
-                    /* we're mentioning location instead of mentioning index, coz we're looping on size and as size
-                    basically starts with 1, we can also call it as location */
                     System.out.println("\nNode is found at location : " + i);
                     return true;
                 }

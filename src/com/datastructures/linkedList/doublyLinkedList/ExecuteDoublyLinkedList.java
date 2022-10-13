@@ -13,5 +13,6 @@ public class ExecuteDoublyLinkedList {
         System.out.println("Value of tail is : " + doublyLinkedListFactory.tail.nodeValue);
         doublyLinkedListFactory.traverseDoublyLinkedList();
         doublyLinkedListFactory.reverseTraverseDoublyLinkedList();
+        doublyLinkedListFactory.searchNode(6);
     }
 }
