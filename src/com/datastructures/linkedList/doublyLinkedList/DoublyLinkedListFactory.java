@@ -87,8 +87,8 @@ public class DoublyLinkedListFactory {
 
     /* Searching doubly linked list */
     public boolean searchNode(int valueOfNode) {
-        DoublyNode tempNode = head;
         if(head != null) {
+            DoublyNode tempNode = head;
             for(int i=0; i<size; i++) {
                 if(tempNode.nodeValue == valueOfNode) {
                     System.out.println("Node found at location/index : " + i);
