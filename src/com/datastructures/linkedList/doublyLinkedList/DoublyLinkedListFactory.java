@@ -50,4 +50,21 @@ public class DoublyLinkedListFactory {
         }
         size++;
     }
+
+    /* Doubly linked list traversal */
+    public void traverseDoublyLinkedList() {
+        DoublyNode tempNode = head;
+        if(head != null) {
+            for(int i=0; i<size; i++) {
+                System.out.print(tempNode.nodeValue);
+                if(i != size-1) {
+                    System.out.print(" -> ");
+                }
+                tempNode = tempNode.nextNode;
+            }
+            System.out.println();
+        } else {
+            System.out.println("Doubly linked list does not exist !!");
+        }
+    }
 }
