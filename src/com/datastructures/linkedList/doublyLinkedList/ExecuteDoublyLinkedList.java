@@ -12,5 +12,6 @@ public class ExecuteDoublyLinkedList {
         doublyLinkedListFactory.insertNode(7,2);
         System.out.println("Value of tail is : " + doublyLinkedListFactory.tail.nodeValue);
         doublyLinkedListFactory.traverseDoublyLinkedList();
+        doublyLinkedListFactory.reverseTraverseDoublyLinkedList();
     }
 }

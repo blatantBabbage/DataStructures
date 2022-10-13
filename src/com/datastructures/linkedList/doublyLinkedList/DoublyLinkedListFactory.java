@@ -51,7 +51,7 @@ public class DoublyLinkedListFactory {
         size++;
     }
 
-    /* Doubly linked list traversal */
+    /* Forward traversal - Doubly linked list */
     public void traverseDoublyLinkedList() {
         DoublyNode tempNode = head;
         if(head != null) {
@@ -61,6 +61,23 @@ public class DoublyLinkedListFactory {
                     System.out.print(" -> ");
                 }
                 tempNode = tempNode.nextNode;
+            }
+            System.out.println();
+        } else {
+            System.out.println("Doubly linked list does not exist !!");
+        }
+    }
+
+    /* Reverse traversal - Doubly linked list */
+    public void reverseTraverseDoublyLinkedList() {
+        DoublyNode tempNode = tail;
+        if(tail != null) {
+            for(int i=0; i<size; i++) {
+                System.out.print(tempNode.nodeValue);
+                if(i != size-1) {
+                    System.out.print(" <- ");
+                }
+                tempNode = tempNode.prevNode;
             }
             System.out.println();
         } else {
