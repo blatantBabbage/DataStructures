@@ -102,4 +102,56 @@ public class DoublyLinkedListFactory {
         System.out.println("Doubly linked list does not exist !!");
         return false;
     }
+
+    /* Delete a node in doubly linked list */
+    public void deleteNode(int index) {
+        if(head == null) {
+            System.out.println("Doubly linked list does not exist !!");
+            return;
+        } else if (index == 0) {
+            /* deleting node from beginning of list */
+
+            // checking if list has only one node
+            if(size == 1) {
+                head = null;
+                tail = null;
+                size--;
+            }
+
+            // below execution is used when list has more than one node
+            // setting null reference for previous node reference of 2nd node, which will become 1st node post deletion
+            head.nextNode.prevNode = null;
+            head = head.nextNode;
+            size--;
+        } else if (index >= size-1) {
+            /* deleting node from end of list */
+
+            // checking if list has only one node
+            if(size == 1) {
+                head = null;
+                tail = null;
+                size--;
+            }
+
+            // below execution is used when list has more than one node
+            tail.prevNode.nextNode = null;
+            tail = tail.prevNode;
+            size--;
+        } else {
+            /* deleting node from a specific index in list */
+
+            DoublyNode doublyNode = head;
+            int location = 0;
+            while(location<index-1) {
+                doublyNode = doublyNode.nextNode;
+                location++;
+            }
+            /* assigning next node reference of current node with node reference of the node next/after the node to be deleted */
+            doublyNode.nextNode = doublyNode.nextNode.nextNode;
+            /* assigning previous node reference of the node after the node to be deleted with the reference of node
+            before the node to be deleted */
+            doublyNode.nextNode.prevNode = doublyNode;
+            size--;
+        }
+    }
 }

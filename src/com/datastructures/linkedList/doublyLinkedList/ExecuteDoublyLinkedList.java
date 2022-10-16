@@ -14,5 +14,11 @@ public class ExecuteDoublyLinkedList {
         doublyLinkedListFactory.traverseDoublyLinkedList();
         doublyLinkedListFactory.reverseTraverseDoublyLinkedList();
         doublyLinkedListFactory.searchNode(6);
+        doublyLinkedListFactory.deleteNode(0);
+        doublyLinkedListFactory.traverseDoublyLinkedList();
+        doublyLinkedListFactory.deleteNode(1);
+        doublyLinkedListFactory.traverseDoublyLinkedList();
+        doublyLinkedListFactory.deleteNode(1);
+        doublyLinkedListFactory.traverseDoublyLinkedList();
     }
 }
