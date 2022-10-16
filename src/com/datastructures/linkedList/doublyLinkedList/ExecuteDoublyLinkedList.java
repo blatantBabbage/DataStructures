@@ -18,7 +18,6 @@ public class ExecuteDoublyLinkedList {
         doublyLinkedListFactory.traverseDoublyLinkedList();
         doublyLinkedListFactory.deleteNode(1);
         doublyLinkedListFactory.traverseDoublyLinkedList();
-        doublyLinkedListFactory.deleteNode(1);
-        doublyLinkedListFactory.traverseDoublyLinkedList();
+        doublyLinkedListFactory.deleteDoublyLinkedList();
     }
 }
