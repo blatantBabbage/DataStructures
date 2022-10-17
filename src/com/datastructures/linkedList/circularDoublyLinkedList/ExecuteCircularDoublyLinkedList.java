@@ -12,5 +12,6 @@ public class ExecuteCircularDoublyLinkedList {
         circularDoublyLinkedListFactory.insertNode(6,2);
         System.out.println("value of 3rd node is : " + circularDoublyLinkedListFactory.head.nextNode.nextNode.nodeValue);
         circularDoublyLinkedListFactory.traverseDoublyLinkedList();
+        circularDoublyLinkedListFactory.reverseTraverseDoublyLinkedList();
     }
 }

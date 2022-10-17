@@ -68,4 +68,21 @@ public class CircularDoublyLinkedListFactory {
             System.out.println("Circular doubly linked list does not exist !!");
         }
     }
+
+    /* Reverse traversal - Circular Doubly linked list */
+    public void reverseTraverseDoublyLinkedList() {
+        if(tail != null) {
+            DoublyNode doublyNode = tail;
+            for(int i=0; i<size; i++) {
+                System.out.print(doublyNode.nodeValue);
+                doublyNode = doublyNode.prevNode;
+                if(i < size-1) {
+                    System.out.print(" <- ");
+                }
+            }
+            System.out.println();
+        } else {
+            System.out.println("Circular doubly linked list does not exist !!");
+        }
+    }
 }
