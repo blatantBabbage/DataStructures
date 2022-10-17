@@ -13,5 +13,6 @@ public class ExecuteCircularDoublyLinkedList {
         System.out.println("value of 3rd node is : " + circularDoublyLinkedListFactory.head.nextNode.nextNode.nodeValue);
         circularDoublyLinkedListFactory.traverseDoublyLinkedList();
         circularDoublyLinkedListFactory.reverseTraverseDoublyLinkedList();
+        circularDoublyLinkedListFactory.searchNode(6);
     }
 }

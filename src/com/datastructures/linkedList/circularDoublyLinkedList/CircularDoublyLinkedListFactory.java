@@ -85,4 +85,22 @@ public class CircularDoublyLinkedListFactory {
             System.out.println("Circular doubly linked list does not exist !!");
         }
     }
+
+    /* Searching circular doubly linked list */
+    public boolean searchNode(int valueOfNode) {
+        if(head == null) {
+            System.out.println("Circular doubly linked list does not exist !!");
+            return false;
+        }
+        DoublyNode tempDoublyNode = head;
+        for(int i=0; i<size; i++) {
+            if(tempDoublyNode.nodeValue == valueOfNode) {
+                System.out.println("Doubly node found at index : " + i);
+                return true;
+            }
+            tempDoublyNode = tempDoublyNode.nextNode;
+        }
+        System.out.println("Doubly node is not found in circular linked list");
+        return false;
+    }
 }
