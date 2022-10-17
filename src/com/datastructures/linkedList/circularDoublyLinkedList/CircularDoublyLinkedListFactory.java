@@ -51,4 +51,21 @@ public class CircularDoublyLinkedListFactory {
         }
         size++;
     }
+
+    /* Forward traversal - Circular Doubly linked list */
+    public void traverseDoublyLinkedList() {
+        if(head != null) {
+            DoublyNode doublyNode = head;
+            for (int i=0; i<size; i++) {
+                System.out.print(doublyNode.nodeValue);
+                doublyNode = doublyNode.nextNode;
+                if (i < size-1) {
+                    System.out.print(" -> ");
+                }
+            }
+            System.out.println();
+        } else {
+            System.out.println("Circular doubly linked list does not exist !!");
+        }
+    }
 }
