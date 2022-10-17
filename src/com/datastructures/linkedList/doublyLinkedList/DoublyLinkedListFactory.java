@@ -29,7 +29,7 @@ public class DoublyLinkedListFactory {
             node.nextNode = head;
             head.prevNode = node;
             head = node;
-        } else if (location >= size-1) {
+        } else if (location >= size) {
             // insert node at the end of list
             node.nextNode = null;
             node.prevNode = tail;
