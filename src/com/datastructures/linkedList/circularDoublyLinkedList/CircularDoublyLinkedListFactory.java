@@ -103,4 +103,45 @@ public class CircularDoublyLinkedListFactory {
         System.out.println("Doubly node is not found in circular linked list");
         return false;
     }
+
+    /* Delete a node in doubly linked list */
+    public void deleteNode(int index) {
+        if(head == null) {
+            System.out.println("Circular doubly linked list does not exist !!");
+            return;
+        } else if (index == 0) {
+            if(size == 1) {
+                head.nextNode = null;
+                head.prevNode = null;
+                head = null;
+                tail = null;
+                size--;
+            }
+            head = head.nextNode;
+            head.prevNode = tail;
+            tail.nextNode = head;
+            size--;
+        } else if (index >= size-1) {
+            if(size == 1) {
+                head.nextNode = null;
+                head.prevNode = null;
+                head = null;
+                tail = null;
+                size--;
+            }
+            tail = tail.prevNode;
+            tail.nextNode = head;
+            head.prevNode = tail;
+            size--;
+        } else {
+            DoublyNode tempDoublyNode = head;
+            int location = 0;
+            while (location < index-1) {
+                tempDoublyNode = tempDoublyNode.nextNode;
+            }
+            tempDoublyNode.nextNode = tempDoublyNode.nextNode.nextNode;
+            tempDoublyNode.nextNode.prevNode = tempDoublyNode;
+            size--;
+        }
+    }
 }

@@ -14,5 +14,9 @@ public class ExecuteCircularDoublyLinkedList {
         circularDoublyLinkedListFactory.traverseDoublyLinkedList();
         circularDoublyLinkedListFactory.reverseTraverseDoublyLinkedList();
         circularDoublyLinkedListFactory.searchNode(6);
+        circularDoublyLinkedListFactory.deleteNode(0);
+        circularDoublyLinkedListFactory.traverseDoublyLinkedList();
+        circularDoublyLinkedListFactory.deleteNode(1);
+        circularDoublyLinkedListFactory.traverseDoublyLinkedList();
     }
 }
