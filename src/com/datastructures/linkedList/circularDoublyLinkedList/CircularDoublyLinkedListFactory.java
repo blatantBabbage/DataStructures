@@ -144,4 +144,21 @@ public class CircularDoublyLinkedListFactory {
             size--;
         }
     }
+
+    /* Delete complete circular singly linked list */
+    public void deleteDoublyLinkedList() {
+        if(head != null) {
+            DoublyNode doublyNode = head;
+            for(int i=0; i<size; i++) {
+                doublyNode.prevNode = null;
+                doublyNode = doublyNode.nextNode;
+            }
+            head = null;
+            tail = null;
+            size = 0;
+            System.out.println("Circular doubly linked list has been deleted !!");
+            return;
+        }
+        System.out.println("Circular doubly linked list does not exist !!");
+    }
 }
