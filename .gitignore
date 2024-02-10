@@ -4,3 +4,4 @@ DE files #
 *.iml
 lib
 OUT
+*DS_Store
