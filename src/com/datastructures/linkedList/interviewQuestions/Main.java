@@ -30,5 +30,21 @@ public class Main {
         SumLists sumLists = new SumLists();
         LinkedList resultLL = sumLists.result(linkedListA, linkedListB);
         resultLL.traveseLL();
+
+        LinkedList ll1 = new LinkedList();
+        LinkedList ll2 = new LinkedList();
+        ll1.insertNode(3);
+        ll1.insertNode(1);
+        ll1.insertNode(5);
+        ll1.insertNode(9);
+        ll2.insertNode(2);
+        ll2.insertNode(4);
+        ll2.insertNode(6);
+        IntersectionLists intersectionLists = new IntersectionLists();
+        intersectionLists.addSameNode(ll1, ll2, 7);
+        intersectionLists.addSameNode(ll1, ll2, 2);
+        intersectionLists.addSameNode(ll1, ll2, 1);
+        Node intersectingValue = intersectionLists.findIntersection(ll1,ll2);
+        System.out.println("The intersecting node is " + intersectingValue.value);
     }
 }
