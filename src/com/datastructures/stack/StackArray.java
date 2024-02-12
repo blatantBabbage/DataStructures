@@ -1,10 +1,10 @@
 package com.datastructures.stack;
 
-public class Stack {
+public class StackArray {
     int[] arr;
     int topOfStack;
 
-    public Stack(int size) {
+    public StackArray(int size) {
         this.arr = new int[size];
         topOfStack = -1;
         System.out.println("Initialized Array Stack of size " + size);

@@ -1,4 +1,5 @@
-package com.datastructures.linkedList.singlyLinkedList;
+package com.datastructures.stack;
+
 
 /*
 This CreateSinglyLinkedList class does all the operation for the singly linked list as the following:
@@ -6,7 +7,7 @@ This CreateSinglyLinkedList class does all the operation for the singly linked l
 2. Instantiate a node, assign value to node and set reference to null if the size of linked list is 1.
 3. Assign the above created node to head and tail in order to generate a node link.
  */
-public class CreateSinglyLinkedList {
+public class SinglyLinkedList {
     public Node head;
     public Node tail;
     // everytime a new node is added we'll increase the size

@@ -3,20 +3,20 @@ package com.datastructures.linkedList.singlyLinkedList;
 public class ExecuteSinglyLinkedList {
 
     public static void main(String[] args) {
-        CreateSinglyLinkedList createSinglyLinkedList = new CreateSinglyLinkedList();
-        createSinglyLinkedList.generateNode(5);
-        System.out.println(createSinglyLinkedList.head.nodeValue);
-        createSinglyLinkedList.insertNode(6,1);
-        System.out.println(createSinglyLinkedList.head.nextReference.nodeValue);
-        createSinglyLinkedList.insertNode(7,2);
-        System.out.println(createSinglyLinkedList.head.nextReference.nextReference.nodeValue);
-        createSinglyLinkedList.insertNode(8,3);
-        createSinglyLinkedList.insertNode(9,4);
-        createSinglyLinkedList.searchNode(9);
-        createSinglyLinkedList.traverseSinglyLinkedList();
-        createSinglyLinkedList.deleteNode(3);
-        createSinglyLinkedList.traverseSinglyLinkedList();
-        createSinglyLinkedList.deleteSinglyLinkedList();
-        createSinglyLinkedList.traverseSinglyLinkedList();
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+        singlyLinkedList.generateNode(5);
+        System.out.println(singlyLinkedList.head.nodeValue);
+        singlyLinkedList.insertNode(6,1);
+        System.out.println(singlyLinkedList.head.nextReference.nodeValue);
+        singlyLinkedList.insertNode(7,2);
+        System.out.println(singlyLinkedList.head.nextReference.nextReference.nodeValue);
+        singlyLinkedList.insertNode(8,3);
+        singlyLinkedList.insertNode(9,4);
+        singlyLinkedList.searchNode(9);
+        singlyLinkedList.traverseSinglyLinkedList();
+        singlyLinkedList.deleteNode(3);
+        singlyLinkedList.traverseSinglyLinkedList();
+        singlyLinkedList.deleteSinglyLinkedList();
+        singlyLinkedList.traverseSinglyLinkedList();
     }
 }
