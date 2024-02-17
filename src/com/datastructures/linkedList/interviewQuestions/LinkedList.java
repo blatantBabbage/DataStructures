@@ -28,6 +28,18 @@ public class LinkedList {
         size++;
     }
 
+    public void traverseAlt() {
+        Node runner = head;
+        while (runner != null) {
+            System.out.print(runner.value);
+            if(runner.nextNodeRef != null) {
+                System.out.print(" -> ");
+            }
+            runner = runner.nextNodeRef;
+        }
+        System.out.println("\n");
+    }
+
     public void traveseLL() {
         Node tempNode = head;
         for(int i=0; i<size; i++) {
